@@ -1,0 +1,82 @@
+FDTD Simulation Run Notes
+==========================
+
+This document summarizes the key simulation settings used in the finite-difference 
+time-domain (FDTD) simulations reported in the associated Materials Advances manuscript.
+
+
+Software
+--------
+ANSYS Lumerical FDTD Solutions
+
+
+Simulation File
+---------------
+- File type: .fsp (Lumerical FDTD project file)
+- The .fsp file contains the complete simulation setup, including geometry, sources, 
+  monitors, mesh settings, and boundary conditions.
+
+
+Simulation Type
+---------------
+3D FDTD simulation of a perovskite light-emitting diode (PeLED) incorporating a 
+plasmonic nanostructure for spontaneous emission enhancement and light extraction analysis.
+
+
+Geometry Overview
+-----------------
+- Substrate and electrodes
+- Electron transport layer (ETL)
+- Perovskite emissive layer (CsSnₓGe₁₋ₓI₃)
+- Hole transport layer (HTL)
+- Plasmonic nanostructure positioned near the emissive region
+
+The representative geometry is fully defined within the provided .fsp file.
+
+
+Source Definition
+-----------------
+- Electric dipole source
+- Emission wavelength range: Near-infrared (as reported in the manuscript)
+- Dipole orientations: In-plane and out-of-plane configurations
+- Dipole location: Within the perovskite emissive layer at a fixed distance from 
+  the plasmonic structure
+
+
+Boundary Conditions
+-------------------
+- Lateral directions: Periodic boundary conditions
+- Vertical direction: Perfectly matched layers (PML)
+
+
+Mesh Settings
+-------------
+- Non-uniform mesh
+- Local mesh refinement applied around the plasmonic nanostructure
+- Coarser mesh used in non-critical regions to reduce computational cost
+
+
+Monitors
+--------
+- Power monitors for radiated power calculation
+- Near-field monitors for electric field distribution
+- Far-field projection monitor for light extraction efficiency (LEE)
+- Normalization monitors for Purcell factor evaluation
+
+
+Simulation Outputs
+------------------
+- Purcell enhancement factor
+- Light extraction efficiency (LEE)
+- Near-field electric field distributions
+- Far-field radiation patterns
+
+
+Notes
+-----
+- Raw field data and time-domain monitor outputs are not included in this repository 
+  due to data size and software-specific constraints.
+- The shared .fsp file represents a reproducible reference configuration illustrating 
+  the simulation methodology used in this work.
+- Additional information and data can be obtained from the corresponding author upon 
+  reasonable request.
